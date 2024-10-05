@@ -1,0 +1,19 @@
+git clone git@github.com:narin-png/Calculator.git
+cd Calculator
+git checkout -b feature-multiplication
+git add Multiplication.txt
+git commit -m "multiplication.txt"
+git push --set-upstream origin feature-multiplication
+git push origin feature-multiplication
+git checkout main
+git checkout -b feature-divison
+git add Division.txt
+git commit -m "division"
+git push
+git push --set-upstream origin feature-divison
+git pull
+git checkout main
+git merge feature-division
+git merge feature-multiplication
+git branch -d feature-divison
+git branch -d feature-multiplication
